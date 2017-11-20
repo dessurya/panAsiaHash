@@ -1,0 +1,253 @@
+/* public */
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	.clearfix{
+		clear: both;
+	}
+	.buton-style{
+        font-family: 'SourceSansPro Bold';
+		padding: 15px 25px;
+		text-decoration: none;
+		color: white;
+		background-color: rgb(52,83,46);
+		border-radius: 0px;
+		opacity: 1;
+		transition: all .5s;
+	}
+	.buton-style:hover{
+		opacity: .6
+	}
+	.text-center{
+		text-align: center;
+	}
+
+	.set-wrapper{
+		position: relative;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.set-wrapper #set-width{
+		position: relative;
+		margin: 0 auto;
+	}
+	.set-wrapper #set-width.width-large{
+		width: 90%;
+	}
+	.set-wrapper #set-width.width-medium{
+		width: 80%;
+	}
+
+	/* mobile */
+		@media (max-width: 480px) {
+			body{
+				overflow-x: hidden !important;
+			}
+		}
+	/* mobile */
+/* public */
+
+/* navbar */
+	#navbar{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 20;
+		font-family: 'open sans bold'
+	}
+	#navbar .bar{
+		position: relative;
+	}
+	#navbar .bar .midle{
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		height: 85px;
+	}
+	#navbar .bar .midle #col{
+		position: relative;
+		padding: 0 20px;
+	}
+	/* logo */
+		#navbar #logo.bar{
+			float: left;
+		}
+		#navbar #logo.bar img{
+			height: 70px;
+		}
+	/* logo */
+	/* list */
+		#navbar #list.bar{
+			float: right;
+		}
+		#navbar #list.bar a{
+			font-size: 18px;
+			color: rgb(104,161,71);
+			text-decoration: none;
+			transition: all .51s;
+		}
+		#navbar #list.bar a:hover{
+			color: rgb(52,83,46);
+		}
+	/* list */
+/* navbar */
+
+/* navbar in-scroll */
+	#navbar,
+	#navbar .bar .midle,
+	#navbar .bar .midle #col,
+	#navbar #logo.bar img,
+	#navbar #list.bar a{
+		transition: all 1.51s;
+	}
+
+	#navbar.in-scroll{
+		background-color: rgba(211,234,105,.9);
+	}
+	#navbar.in-scroll .bar .midle{
+		height: 45px;
+	}
+	#navbar.in-scroll .bar .midle #col{
+		padding: 0 10px;
+	}
+	#navbar.in-scroll #logo.bar img{
+		height: 40px;
+	}
+	#navbar.in-scroll #list.bar a{
+		font-size: 16px;
+	}
+/* navbar in-scroll */
+
+
+/* footer */
+	#footer{
+		position: relative;
+		margin: 0;
+		padding: 0;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		color: white;
+	}
+	#footer .bar{
+		position: relative;
+		float: left;
+		width: 50%;
+		padding: 30px 0;
+	}
+	#footer .bar h2{
+		font-family: 'SourceSansPro Bold';
+	}
+	#footer .bar .rows{
+		display: table;
+		width: 100%;
+	}
+	#footer .bar .rows .cell{
+		display: table-cell;
+		vertical-align: middle;
+		height: 45px;
+		padding: 0 10px;
+	}
+	#footer .bar .rows .cell:nth-child(odd){
+		width: 15%;
+		text-align: center;
+	}
+	#footer .bar .rows .cell:nth-child(even){
+		width: 85%;
+	}
+	#footer .bar .rows .cell p{
+		margin: 0;
+		font-family: 'kanit-light';
+	}
+	#footer .bar #temukan-kami img{
+		width: 40px;
+		display: inline-grid;
+		margin: 0 2.5px;
+	}
+	#footer .bar #tabs{
+		display: table;
+		width: 100%;
+	}
+	#footer .bar #tabs .cols{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 10px;
+		text-align: center;
+	}
+/* footer */
+
+/* mobile */
+	@media (max-width: 960px) {
+		/* public */
+			body{
+				overflow-x: hidden !important;
+			}
+		/* public */
+
+		/* navbar */
+			#navbar{
+				background-color: rgba(211,234,105,.9);
+			}
+			#navbar .bar .midle{
+				display: block;
+				height: auto;
+				padding: 5px 0;
+			}
+			#navbar #logo.bar,
+			#navbar #list.bar{
+				float: none;
+			}
+			#navbar #logo.bar img{
+				height: 45px;
+			}
+			#navbar #logo.bar .midle #col #burger-icon{
+				position: absolute;
+				border: .5px solid rgb(1, 137, 224);
+				border-radius: 4px;
+				padding: 2.5px;
+				right: 15px;
+				top: 10px;
+				cursor: pointer;
+			}
+			#navbar #logo.bar .midle #col #burger-icon div{
+				width: 26px;
+				height: 3px;
+				margin: 3px 0;
+				background-color: rgb(1, 137, 224);
+				border-radius: 5px;
+			}
+		/* navbar */
+		
+		/* navbar active */
+			#navbar #list.bar,
+			#navbar #list.bar .midle{
+				opacity: 0;
+				height: 0;
+				padding: 0;
+			}
+			#navbar.active #list.bar,
+			#navbar.active #list.bar .midle{
+				opacity: 1;
+				height: auto;
+				padding: 5px 0;
+			}
+		/* navbar active */
+
+		/* footer */
+			#footer .bar{
+				float: none;
+				width: 100%;
+				padding: 10px 0;
+			}
+			#footer .bar #tabs .cols{
+				padding: 0;
+			}
+			#footer .bar #tabs .cols img{
+				height: 75px;
+			}
+		/* footer */
+	}
+/* mobile */
