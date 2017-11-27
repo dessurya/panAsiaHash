@@ -14,6 +14,18 @@
 // frontend
 	Route::get('/', 'Frontend\FrontendController@home')
 		->name('frontend.home');
+	Route::get('/gallery', 'Frontend\FrontendController@gallery')
+		->name('frontend.gallery');
+	Route::get('/goverment-message', 'Frontend\FrontendController@govermentMessage')
+		->name('frontend.goverment-message');
+	Route::get('/register-and-payment', 'Frontend\FrontendController@registerPayment')
+		->name('frontend.registerPayment');
+	Route::get('/schedule', 'Frontend\FrontendController@schedule')
+		->name('frontend.schedule');
+	Route::get('/commitee', 'Frontend\FrontendController@commitee')
+		->name('frontend.commitee');
+	Route::get('/who-coming', 'Frontend\FrontendController@coming')
+		->name('frontend.coming');
 // frontend
 
 // backend

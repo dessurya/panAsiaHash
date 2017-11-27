@@ -1,0 +1,28 @@
+#gallery #list-gallery{
+	position: relative;
+}
+#gallery #list-gallery .thumbnail{
+	float: left;
+	width: 25%;
+	height: 260px;	
+}
+#gallery #list-gallery .thumbnail a #display-img{
+	width: 100%;
+	height: 260px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#gallery #list-gallery .centered{
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+	padding: 40px 0;
+}
+
+@media (max-width: 960px) {
+	#gallery #list-gallery .thumbnail,
+	#gallery #list-gallery .thumbnail a #display-img{
+		height: 80px;
+	}
+}

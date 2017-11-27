@@ -18,10 +18,50 @@
 
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/home.css') }}">
+	<style type="text/css">
+		#banner{
+			animation: img-animate 25s ease-in-out infinite alternate;
+			-webkit-animation: img-animate 25s ease-in-out infinite alternate;
+		}
+		@keyframes img-animate{
+			0%
+		    {
+		    	background-image : 
+				url('{{ asset('assets/images-base/banner.jpg') }}')
+			}
+			50%
+		    {
+		    	background-image : 
+				url('{{ asset('assets/images-base/something.jpg') }}')
+			}
+			100%
+		    {
+		    	background-image : 
+				url('{{ asset('assets/images-base/footer-bg.jpg') }}')
+			}
+		}
+		@-webkit-keyframes img-animate{
+			0%
+		    {
+		    	background-image : 
+				url('{{ asset('assets/images-base/banner.jpg') }}')
+			}
+			50%
+		    {
+		    	background-image : 
+				url('{{ asset('assets/images-base/something.jpg') }}')
+			}
+			100%
+		    {
+		    	background-image : 
+				url('{{ asset('assets/images-base/footer-bg.jpg') }}')
+			}
+		}
+	</style>
 @endsection
 
 @section('body')
-	<div id="banner" style="background-image: url('{{ asset('assets/images-base/banner.jpg') }}');">
+	<div id="banner">
 		<img id="banner-laft-img" src="{{ asset('assets/images-base/left-banner.png') }}">
 		<div class="set-wrapper">
 			<div id="set-width" class="width-medium">
@@ -222,7 +262,7 @@
 					<h3>Limited participant availabiliyt</h3>
 
 					<div class="text-center">
-						<a class="buton-style" href="">REGISTER NOW</a>
+						<a class="buton-style" href="{{ route('frontend.registerPayment') }}">REGISTER NOW</a>
 					</div>
 				</div>
 			</div>
