@@ -34,7 +34,7 @@ class UserController extends Controller
 
         $validator = Validator::make($request->all(), [
           'new_name' => 'required',
-          'new_email' => 'required|email|unique:amd_users,email'
+          'new_email' => 'required|email|unique:users,email'
         ], $message);
 
         if($validator->fails())

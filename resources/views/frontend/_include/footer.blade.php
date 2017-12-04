@@ -20,6 +20,7 @@
 						<p>changsa.pah2019@gmail.com</p>
 					</div>
 				</div>
+				{{--
 				<div class="rows">
 					<div class="cell">
 						<img src="{{ asset('assets/images-base/location.png') }}"  width="15px">
@@ -28,17 +29,20 @@
 						<p>Jln. Lorem Ipsum</p>
 					</div>
 				</div>
+				--}}
 				<h2>Find Us</h2>
 				<div id="temukan-kami">
-					<a href="" target="_blank">
+					<a href="http://facebook.com/panasiahash2019" target="_blank">
 						<img src="{{ asset('assets/images-base/logo-fb-putih.png') }}">
 					</a>
+					{{--
 					<a href="" target="_blank">
 						<img src="{{ asset('assets/images-base/logo-ig-putih.png') }}">
 					</a>
 					<a href="" target="_blank">
 						<img src="{{ asset('assets/images-base/logo-youtube-putih.png') }}">
 					</a>
+					--}}
 				</div>
 			</div>
 			<div class="bar">

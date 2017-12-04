@@ -10,20 +10,27 @@
 @section('style')
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/sub-public.css') }}">
 	<style type="text/css">
-		#registration ol li{
-			font-family: 'SourceSansPro Bold';
-			color: rgb(103,161,71);
-			margin-bottom: 10px;
+		.first-content{
+			padding-bottom: 25px;
+		}
+		#content{
+			color: rgb(79,106,74);
+			font-family: 'SourceSansPro Light';
+			font-size: 18px;
+			line-height: 1.6;
+		}
+
+		#content h3{
 			font-size: 26px;
 		}
-		#registration ol li h3{
-			margin: 5px 0;
+
+		#content ul li{
+			margin: 10px 0;
 		}
-		#registration ol li p{
-			color: rgb(160,175,157);
-			font-family: 'kanit-light';
-			font-size: 16px;
-			margin: 5px 0;
+
+		#content h3,
+		#content strong{
+			font-family: 'SourceSansPro Bold';
 		}
 
 		#download-wrapper{
@@ -49,6 +56,7 @@
 			display: table;
 			width: 450px;
 			margin: 0 auto;
+			margin-top: 55px;
 
 			text-decoration: none;
 			color: white;
@@ -67,15 +75,15 @@
 			vertical-align: middle;
 		}
 		#download-wrapper a div img{
-			height: 60px;
+			height: 40px;
 		}
 		#download-wrapper a div:nth-child(odd){
 			background-color: rgb(103,161,71);
-			width: 30%;
+			width: 20%;
 		}
 		#download-wrapper a div:nth-child(even){
 			background-color: rgb(52,83,46);
-			width: 70%;
+			width: 80%;
 		}
 		@media (max-width: 960px) {
 			#download-wrapper a{
@@ -83,46 +91,162 @@
 			}
 		}
 	</style>
-}
+
 @endsection
 
 @section('body')
 
-	<div id="registration" class="first-content" style="background-image: url('{{ asset('assets/images-base/petern.jpg') }}');">
+	<div id="registration" class="first-content" style="background-image: url('{{ asset('assets/images-base/petern.png') }}');">
+		<img id="das" src="{{ asset('assets/images-base/das.png') }}">
 		<div class="set-wrapper">
 			<div id="set-width" class="width-medium">
 				<h2 id="title">Register & Payment</h2>
-				<p id="descript">
-					some text in here for greating this page thanks.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
-				</p>
-				<ol>
-					@for($a=0; $a<=2; $a++)
-					<li>
-						<h3>
-							Title Here
-						</h3>
-						<p>
-							ome text in here for greating this page thanks.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
-						</p>
-					</li>
-					@endfor
-				</ol>
+
+				<div id="content">
+					<h3>
+						The Chairman of Pan Asia Changsha HHH China has opened registration for Panasia Hash 2019
+					</h3>
+					
+					<p>
+						<strong>Dear Hashers,</strong>
+					</p>
+					<p>
+						China is making a bid for Pan Asia Hash 2019 to be held from 7th - 10th November 2019 in ZHANGJIAJIE NATIONAL FOREST PARK. We believe China is the best choice due to its beautiful people, culture, cuisine and not to forget its landscapes . We have chosen Zhang Jia Jie for its breathtaking scenery, an amazing view while hashing in the land of avatar. A MUST GO event that is fully supported by the Chinese Tourism Minister / Board / Government.
+					</p>
+					<p>
+						<strong>
+							The proposed event is as followed: 
+						</strong>
+					</p>
+
+					<ul>
+						<li>
+							Thursday, 7th November 2019
+							<br>
+							<strong>
+								RED DRESS
+							</strong>
+						</li>
+						<li>
+							Friday, 8th November 2019
+							<br>
+							<strong>
+								WELCOME PARTY
+							</strong>
+						</li>
+						<li>
+							Saturday, 9th November 2019
+							<br>
+							<strong>
+								HASH RUN
+							</strong>
+						</li>
+						<li>
+							Sunday, 10th November 2019
+							<br>
+							<strong>
+								HASH RUN AND FAREWELL PARTY
+							</strong>
+						</li>
+					</ul>
+
+					<p>
+						<strong>
+							Registration fee :
+						</strong>
+					</p>
+
+					<ul>
+						<li>
+							USD 125 = RM550 = RMB850   till 31th Dec 2017
+						</li>
+						<li>
+							USD 150 = RM670 = RMB1000  till 31th June 2018
+						</li>
+						<li>
+							USD 175 = RM780 = RMB1170  till 31th Dec 2018
+						</li>
+						<li>
+							USD 200 = RM900 = RMB1340  till 31 th June 2019
+						</li>
+						<li>
+							USD 250 = RM1120 = RMB1670 till Event
+						</li>
+					</ul>
+
+					<p>
+						<strong>
+							Payment can be made to:
+						</strong>
+					</p>
+
+					<ul>
+						<li>
+							<strong>
+								China:
+							</strong>
+							<br>
+							Account with institution : China Construction Bank Hunan Branch
+							<br>
+							A/C NO. 6550590121
+							<br>
+							SWIFT : PCBCCNBJHUX
+							<br>
+							Beneficiary's name and A/C No.WU SONG 6236682920010383717
+						</li>
+						<li>
+							<strong>
+								Malaysia:
+							</strong>
+							<br>
+							CIMB BANK
+							<br>
+							No: 7041520814
+							<br>
+							Name: ONG LIE TJIEN @ ONG
+						</li>
+						<li>
+							<strong>
+								Indonesia:
+							</strong>
+							<br>
+							BCA
+							<br>
+							No: 1463487999
+							<br>
+							Name : Supriady 
+						</li>
+					</ul>
+
+					<p>Adviser: King Kong (Mr Liem Chie An)</p>
+					<p>Chairman: Long Sheng (龙胜)</p>
+
+					<p>To register or any queries, please email us at changshahhh@yahoo.com</p>
+				</div>
 
 				<div id="download-wrapper">
 					<h3>Registration Form</h3>
-					<p>
-						ome text in here for greating this page thanks.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
-					</p>
 					<div class="text-center">
-						<a href="{{ asset('assets/images-base/icon-download.png') }}" download>
+						<a href="{{ asset('assets/form/reg-individual2.pdf') }}" download>
 							<div>
 								<img src="{{ asset('assets/images-base/icon-download.png') }}">
 							</div>
 							<div>
-								DOWNLOAD FORM
+								INDIVIDUAL REGISTRATION
+							</div>
+						</a>
+					
+						<a href="{{ asset('assets/form/reg-group2.pdf') }}" download>
+							<div>
+								<img src="{{ asset('assets/images-base/icon-download.png') }}">
+							</div>
+							<div>
+								GROUP REGISTRATION
 							</div>
 						</a>
 					</div>
+
+
 				</div>
 			</div>
 		</div>

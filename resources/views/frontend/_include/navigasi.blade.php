@@ -47,7 +47,7 @@
 				<div class="midle">
 					<div id="col">
 						<a href="{{ route('frontend.registerPayment') }}" class="{{ Route::is('frontend.registerPayment') ? 'active' : '' }}">
-							Registrasi & Payment
+							Registration & Payment
 						</a>
 					</div>
 				</div>

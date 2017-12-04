@@ -59,7 +59,7 @@
 				width: 100%;
 			}
 			.first-content .bar #center #img p{
-				left: -60%;
+				left: -140px;
 			}
 		}
 	</style>
@@ -67,24 +67,74 @@
 
 @section('body')
 
-	<div class="first-content" style="background-image: url('{{ asset('assets/images-base/petern.jpg') }}');">
+	<div class="first-content" style="background-image: url('{{ asset('assets/images-base/petern.png') }}');">
+		<img id="das" src="{{ asset('assets/images-base/das.png') }}">
 		<div class="set-wrapper">
 			<div id="set-width" class="width-medium">
 				<h2 id="title">Commitee</h2>
+				{{--
 				<p id="descript">
 					some text in here for greating this page thanks.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 				</p>
+				--}}
 
-				@for($a=0; $a<=6; $a++)
 				<div class="bar">
 					<div id="center">
-						<div id="img" style="background-image: url('{{ asset('assets/images-base/user.png') }}');">
-							<p>Job Title Here</p>
+						<div id="img" style="background-image: url('{{ asset('assets/images-base/commite1.jpg') }}');">
+							<p>Chairman</p>
 						</div>
-						<h3>Name of Commitee</h3>
+						<h3>Long Sheng</h3>
 					</div>
 				</div>
-				@endfor
+				<div class="bar">
+					<div id="center">
+						<div id="img" style="background-image: url('{{ asset('assets/images-base/commite2.jpg') }}');">
+							<p>Vice chairman 1</p>
+						</div>
+						<h3>Cai Ye Zi</h3>
+					</div>
+				</div>
+				<div class="bar">
+					<div id="center">
+						<div id="img" style="background-image: url('{{ asset('assets/images-base/commite3.jpg') }}');">
+							<p>Vice chairman 2</p>
+						</div>
+						<h3>Da Yu</h3>
+					</div>
+				</div>
+				<div class="bar">
+					<div id="center">
+						<div id="img" style="background-image: url('{{ asset('assets/images-base/commite4.jpg') }}');">
+							<p>Advisor</p>
+						</div>
+						<h3>King Kong</h3>
+					</div>
+				</div>
+				<div class="bar">
+					<div id="center">
+						<div id="img" style="background-image: url('{{ asset('assets/images-base/commite5.jpg') }}');">
+							<p>Advisor</p>
+						</div>
+						<h3>Disco Wanker</h3>
+					</div>
+				</div>
+				<div class="bar">
+					<div id="center">
+						<div id="img" style="background-image: url('{{ asset('assets/images-base/commite6.jpg') }}');">
+							<p>Advisor</p>
+						</div>
+						<h3>Monkey</h3>
+					</div>
+				</div>
+				<div class="bar">
+					<div id="center">
+						<div id="img" style="background-image: url('{{ asset('assets/images-base/commite7.jpg') }}');">
+							<p>Treasurer</p>
+						</div>
+						<h3>Sa Sa</h3>
+					</div>
+				</div>
+
 				<div class="clearfix"></div>
 			</div>
 		</div>

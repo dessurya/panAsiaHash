@@ -22,6 +22,7 @@ class FrontendController extends Controller
     		$view = view('frontend.gallery.img-list',compact('Gallery'))->render();
             return response()->json(['html'=>$view]);
         }
+        
     	return view('frontend.gallery.index', compact('Gallery'));
     }
 
@@ -42,6 +43,40 @@ class FrontendController extends Controller
     }
 
     public function coming(){
-    	return view('frontend.coming.index');
+        $client = new \GuzzleHttp\Client();
+
+        $pageOfApi = 1;
+        $getArray = array();
+
+        while($pageOfApi <= 9999){
+
+            $res = $client->request(
+                'GET', 
+                'http://data.panasiahash2019.com/api.php?page='.$pageOfApi, 
+                ['http_errors' => false]
+            );
+
+            if ($res->getStatusCode() == '404') {
+                $getArray = null;
+                break;
+            }
+            else{
+                if (json_decode($res->getBody()) == null) {
+                    break;
+                }
+                else{
+                    array_push($getArray, json_decode($res->getBody()));
+                }
+            }
+
+            $pageOfApi++;
+        }
+    
+        $get = array();
+        foreach($getArray as $tmpArray){
+            $get = array_merge($get, $tmpArray);
+        }
+
+    	return view('frontend.coming.index', compact('get'));
     }
 }

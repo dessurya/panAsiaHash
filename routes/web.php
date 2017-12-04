@@ -18,7 +18,7 @@
 		->name('frontend.gallery');
 	Route::get('/goverment-message', 'Frontend\FrontendController@govermentMessage')
 		->name('frontend.goverment-message');
-	Route::get('/register-and-payment', 'Frontend\FrontendController@registerPayment')
+	Route::get('/registration-and-payment', 'Frontend\FrontendController@registerPayment')
 		->name('frontend.registerPayment');
 	Route::get('/schedule', 'Frontend\FrontendController@schedule')
 		->name('frontend.schedule');

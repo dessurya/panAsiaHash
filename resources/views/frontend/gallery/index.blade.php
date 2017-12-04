@@ -16,13 +16,16 @@
 
 @section('body')
 
-	<div id="gallery" class="first-content" style="background-image: url('{{ asset('assets/images-base/petern.jpg') }}');">
+	<div id="gallery" class="first-content" style="background-image: url('{{ asset('assets/images-base/petern.png') }}');">
+		<img id="das" src="{{ asset('assets/images-base/das.png') }}">
 		<div class="set-wrapper">
 			<div id="set-width" class="width-medium">
 				<h2 id="title">Gallery</h2>
+				{{--
 				<p id="descript">
 					some text in here for greating this page thanks.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 				</p>
+				--}}
 				<div id="list-gallery">
 					@include('frontend.gallery.img-list')
 					<div id="appendAjax"></div>

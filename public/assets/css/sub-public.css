@@ -3,12 +3,17 @@
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	padding-top: 120px;
 	padding-bottom: 60px;
 
 	background-repeat: repeat;
 	background-size: contain;
 	background-position: center;
-	padding-top: 80px;
+}
+.first-content img#das{
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 .first-content h2#title{
 	font-size: 46px;
@@ -64,6 +69,6 @@
 
 @media (max-width: 960px) {
 	.first-content{
-		padding-top: 20px;
+		padding-top: 60px;
 	}
 }

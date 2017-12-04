@@ -20,7 +20,7 @@
 
     // for dekstop
     if(win.width() > 960){
-    var initNavbar = 168;
+    var initNavbar = 25;
         win.scroll(function () {
             if (win.scrollTop() >= initNavbar) {
                 $( "#navbar" ).addClass( "in-scroll" );

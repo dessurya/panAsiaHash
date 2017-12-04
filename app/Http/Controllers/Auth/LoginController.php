@@ -70,7 +70,7 @@ class LoginController extends Controller
           return redirect()->route('loginForm')->withErrors($validator)->withInput();
         }
 
-        if (Auth::attempt(['email' => $email, 'password' => $password, 'confirmed'=>1 ]))
+        if (Auth::attempt(['email' => $email, 'password' => $password, 'status'=>'Y' ]))
         {
             $set = Users::find(Auth::user()->id);
             $getCounter = $set->login_count;

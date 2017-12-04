@@ -10,6 +10,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
+		background-attachment: fixed;
 	}
 	#banner .set-wrapper #set-width.width-medium{
 		height: 1320px;
@@ -24,7 +25,7 @@
 	#banner #title-wrapper h1{
 		margin: 0;
 		color: rgb(211,234,105);
-		font-size: 64px;
+		font-size: 54px;
 		font-family: 'SourceSansPro Black';
 	}
 	#banner #title-wrapper h2{
@@ -45,8 +46,10 @@
 	}
 	#banner #introduction-wrapper hr{
 		width: 45%;
+		margin-bottom: 60px;
+
 		border-color: rgb(211,234,105);
-		border-width: 5px;
+		border-width: 10px;
 		border-top: none;
 		border-right: none;
 		border-left: none;
@@ -55,8 +58,8 @@
 		position: absolute;
 		z-index: 1;
 		right: 0;
-		top: 305px;
-		top: 34vh;
+		bottom: -277px;
+		bottom: -42vh; 
 	}
 /* banner */
 
@@ -66,16 +69,14 @@
 		width: 100%;
 		margin: 0;
 		padding: 0;
-		height: 1320px;
-		height: 200vh;
+		height: 660px;
 
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: 100% 20%;
 	}
 	#introduction .set-wrapper #set-width.width-medium{
-		height: 1320px;
-		height: 200vh;
+		height: 660px;
 	}
 	#introduction .intruduction-content{
 		position: absolute;
@@ -87,9 +88,9 @@
 	}
 	#introduction .intruduction-content h3{
 		margin-top: 0;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 
-		font-size: 32px;
+		font-size: 42px;
 		font-family: 'SourceSansPro Bold';
 	}
 	#introduction #introduction-top{
@@ -98,7 +99,7 @@
 		left: 0;
 	}
 	#introduction #introduction-bottom{
-		bottom: 100px;
+		bottom: 60px;
 		width: 50%;
 		right: 0;
 	}
@@ -127,12 +128,12 @@
 		color: 
 	}
 	.some-info:nth-child(odd) #positition{
-		float: right;
-		text-align: right;
-	}
-	.some-info:nth-child(even) #positition{
 		float: left;
 		text-align: left;
+	}
+	.some-info:nth-child(even) #positition{
+		float: right;
+		text-align: right;
 	}
 	.some-info #midle{
 		position: relative;
@@ -144,8 +145,9 @@
 	}
 	.some-info #midle h3{
 		color: rgb(103,161,71);
-		font-size: 26px;
+		font-size: 42px;
 		font-family: 'SourceSansPro Bold';
+		margin: 10px auto;
 	}
 	.some-info #midle p{
 		line-height: 1.41;
@@ -153,6 +155,35 @@
 		font-family: 'kanit-light';
 	}
 /* some-info */
+
+/* some-info animate */
+	.some-info #positition #midle h3{
+		color: rgba(103,161,71,0);
+		text-shadow: 
+			0px 25px rgba(103,161,71,.2),
+			0px -25px rgba(103,161,71,.2);
+		transition: all 2.51s;
+	}
+	.some-info.in-view #positition #midle h3{
+		text-shadow: 
+			0px 0px rgba(103,161,71,1),
+			0px 0px rgba(103,161,71,1);
+	}
+
+	.some-info #positition #midle p{
+		color: rgba(66,94,60,0);
+		text-shadow: 
+			100px 0 rgba(66,94,60,0),
+			-100px 0 rgba(66,94,60,0);
+		transition: all 2.51s;
+	}
+	.some-info.in-view #positition #midle p{
+		text-shadow: 
+			0px 0 rgba(66,94,60,1),
+			0px 0 rgba(66,94,60,1);
+	}
+
+/* some-info animate */
 
 /* commite */
 	#commite{
@@ -300,7 +331,6 @@
 		position: relative;
 		width: 100%;
 		display: table;
-		padding-top: 30px;
 	}
 	#gallery .bar{
 		position: relative;
@@ -313,6 +343,7 @@
 		width: 40%;
 	}
 	#gallery .hr.bar hr{
+		border-width: .25px;
 		border-bottom-color: rgb(52,83,46);
 	}
 	#gallery .name.bar{
@@ -344,7 +375,7 @@
 		position: relative;
 		width: 100%;
 		margin: 0;
-		padding: 0;
+		padding: 20px 0;
 		height: 660px;
 		height: 100vh;
 
@@ -375,7 +406,7 @@
 	#countdown #bottom h3{
 		margin-bottom: 40px;
 		font-family: 'SourceSansPro Bold';
-		font-size: 26px;
+		font-size: 36px;
 	}
 	#countdown h2,
 	#countdown h3{
@@ -439,7 +470,7 @@
 			#introduction,
 			#introduction .set-wrapper #set-width.width-medium{
 				height: auto;
-				padding: 20px 0;
+				padding: 10px 0;
 			}
 			#introduction #introduction-top,
 			#introduction #introduction-bottom{
@@ -452,14 +483,20 @@
 				bottom: 0;
 			}
 			#introduction #introduction-bottom{
-				padding-top: 20px;
+				background-color: rgba(192, 226, 142,.8);
 			}
 			#introduction .intruduction-content h3{
 				margin-bottom: 10px;
-				font-size: 22px;
+				font-size: 26px;
+				padding: 10px;
 			}
 			#introduction .intruduction-content p{
 				margin: 5px 0;
+				padding: 10px;
+			}
+			#introduction .intruduction-content .text-center{
+				position: relative;
+				top: -20px;
 			}
 		/* introduction */
 		
@@ -469,13 +506,8 @@
 				height: auto;
 			}
 			.some-info{
-				padding-bottom: 40px;
-			}
-			.some-info:nth-child(odd){
-				background-position: left;
-			}
-			.some-info:nth-child(even){
-				background-position: right;
+				background-image: none !important;
+				background-color: rgba(192, 226, 142,.8);
 			}
 			.some-info:nth-child(odd) #positition,
 			.some-info:nth-child(even) #positition{
@@ -484,22 +516,28 @@
 			.some-info #positition{
 				width: 100%;
 			}
-			.some-info:nth-child(even) #midle{
-				bottom: -40px;
-			}
 			.some-info:nth-child(odd) #midle{
-				top: 0;
+			}
+			.some-info:nth-child(even) #midle{
 			}
 			.some-info #midle{
 				display: block;
 				height: auto;
-				padding: 0 10px;
-				padding-top: 20px;
-				padding-bottom: 40px;
 				background-color: rgba(192, 226, 142,.8);
 			}
 			.some-info #midle h3{
 				margin: 0;
+				padding-top: 10px;
+				font-size: 26px;
+
+				color: rgba(103,161,71,1) !important;
+				text-shadow: 0px 0px !important;
+			}
+			.some-info #midle p{
+				margin: 0;
+
+				color: rgba(66,94,60,1) !important;
+				text-shadow: 0px 0px !important;
 			}
 		/* some-info */
 
